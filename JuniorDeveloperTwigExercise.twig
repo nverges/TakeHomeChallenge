@@ -1,0 +1,59 @@
+{% spaceless %}
+
+{######################################################## 
+ # Set entries by category
+########################################################}
+
+{% set order = 'pin desc, postDate desc' %}
+{% set allEntries = craft.entries.section('articles').order(order).limit(null) %}
+{% set relatedCategories = craft.categories.relatedTo(allEntries) %}
+
+{% set categories = [] %}
+{# Blog thumbnail transform #}
+{% set articleThumbnailTransform = { mode: 'crop', width: 224, height: 224, position: entry.articleImage.first.cropMode.value | default('center-center') } %}
+{# Loop the categories #}
+{% for category in relatedCategories %}
+    {# Get and loop through entries related to this category #}
+    {% set relatedEntries = craft.entries.relatedTo({ targetElement: category, field: 'primaryCategory'}).order(order) %}
+
+    {% set articles = [] %}
+    {% for entry in relatedEntries.limit(3) %}
+        {% set articles = articles | merge([{
+            thumbnail: getImage(entry.articleImage.first.image.image.first | default(null), articleThumbnailTransform),
+            articleTags: entry.articleTags,
+            title: entry.title,
+            postDate: entry.postDate | date('F j, Y'),
+            url: entry.url,
+        }]) %}
+    {% endfor %}
+
+    {% set categories = categories | merge([{
+        title: category.title,
+        url: category.url,
+        entries: articles,
+    }]) %}
+{% endfor %}
+
+{######################################################## 
+ # Crumbs
+########################################################}
+{% set crumbs = {
+    items: [
+        { label: 'Home', href: '/', icon: 'home' },
+        { label: 'Help Guides', href: getGlobalPage('guides').url },
+    ]
+} %}
+
+{######################################################## 
+ # Viewdata
+########################################################}
+
+{% set viewData = {
+    categories: categories | default([]),
+    contactPageUrl: getGlobalPage('contact').url,
+    crumbs: crumbs,
+} %}
+
+{% include '_views/_articleOverview' %}
+
+{% endspaceless %}
