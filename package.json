@@ -1,15 +1,16 @@
 {
-  "name": "rocketmediacodingchallenge",
-  "version": "1.0.0",
-  "description": "card element using html and css",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Nick Verges",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.2",
-    "path": "^0.12.7"
-  }
+    "name": "rocketmediacodingchallenge",
+    "version": "1.0.0",
+    "description": "card element using html and css",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Nick Verges",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.2",
+        "path": "^0.12.7"
+    }
 }
