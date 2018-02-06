@@ -5,12 +5,17 @@
     "main": "index.js",
     "scripts": {
         "start": "node server",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "concurrently \"sass --watch public/scss/style.scss:public/style.css\" \"nodemon server\""
     },
     "author": "Nick Verges",
     "license": "ISC",
     "dependencies": {
         "express": "^4.16.2",
         "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "concurrently": "^3.5.1",
+        "nodemon": "^1.14.12"
     }
 }
