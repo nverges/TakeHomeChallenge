@@ -11,13 +11,12 @@ body {
   box-shadow: -5px 5px 5px #c7c7c7; }
   .card-container div {
     display: inline-block; }
-
-img {
-  border: 1px solid #0f0f3a;
-  max-width: 125px;
-  max-height: 125px;
-  border-radius: 50%;
-  margin-right: 25px; }
+  .card-container img {
+    border: 1px solid #0f0f3a;
+    max-width: 125px;
+    max-height: 125px;
+    border-radius: 50%;
+    margin-right: 25px; }
 
 hr {
   color: #c7c7c7;
@@ -42,9 +41,13 @@ hr {
     transition: all 0.3s ease;
     cursor: pointer; }
 
-.details {
-  margin-top: 25px;
+#bonus {
+  margin-top: 50px;
   text-align: center; }
+  #bonus img {
+    margin-right: 20px;
+    max-width: 150%;
+    max-height: 150%; }
 
 @media screen and (min-width: 601px) and (max-width: 699px) {
   .card-container {

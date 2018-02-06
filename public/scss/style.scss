@@ -15,14 +15,13 @@ body {
     div {
         display: inline-block;
     }
-}
-
-img {
-    border: 1px solid $dark-blue;
-    max-width: 125px;
-    max-height: 125px;
-    border-radius: 50%;
-    margin-right: 25px;
+    img {
+        border: 1px solid $dark-blue;
+        max-width: 125px;
+        max-height: 125px;
+        border-radius: 50%;
+        margin-right: 25px;
+    }
 }
 
 hr {
@@ -52,9 +51,14 @@ hr {
     }
 }
 
-.details {
-    margin-top: 25px;
+#bonus {
+    margin-top: 50px;
     text-align: center;
+    img {
+        margin-right: 20px;
+        max-width: 150%;
+        max-height: 150%;
+    }
 }
 
 @media screen and (min-width: 601px) and (max-width: 699px) {
