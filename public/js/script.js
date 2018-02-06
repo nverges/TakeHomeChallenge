@@ -39,22 +39,13 @@ function giphy(gif) {
     });
 };
 
-// Handles OK/Cancel click
-function message(answer) {
-    if (answer === 'no') {
-        giphy('sad-face');
-    } else {
-        giphy('yay');
-    }
-}
-
 // SEE DETAILS button click event
 const details = function() {
     let answer = confirm('Just for fun.... do you like my coding challenge?!');
     if (!answer) {
-        message('no');
+        giphy('sad-face');
     } else {
-        message('yes');
+        giphy('yay');
     }
 }
 
