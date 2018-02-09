@@ -56,7 +56,7 @@ hr {
   .card-container {
     display: inline-flex; }
     .card-container img {
-      max-height: 40%; }
+      max-height: 75px; }
 
   hr {
     width: 100%; }
