@@ -4,7 +4,7 @@ function giphy(gif) {
     // Search Parameters
     let searchTerm = gif;
     let numResults = 5;
-    let queryURL = `https://api.giphy.com/v1/gifs/search?q=${searchTerm}&api_key=dc6zaTOxFJmzC&limit=${numResults}`;
+    let queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + searchTerm + '&api_key=dc6zaTOxFJmzC&limit=' + numResults;
 
     // AJAX Request
     $.ajax({
@@ -43,9 +43,9 @@ function giphy(gif) {
 const details = function() {
     let answer = confirm('Just for fun.... do you like my coding challenge?!');
     if (!answer) {
-        giphy('sad-face');
+        giphy('boo');
     } else {
-        giphy('yay');
+        giphy('woo-hoo');
     }
 }
 
