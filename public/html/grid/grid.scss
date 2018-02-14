@@ -7,11 +7,10 @@ body {
     // grid
     display: grid;
     grid-auto-columns: fit-content(100%);
-    // grid-auto-columns: fit-content(100%);
+    grid-gap: 20px;
 }
 
 .versions {
-    margin-bottom: 20px;
     h2 {
         display: inline-grid;
         padding: 10px;
@@ -21,7 +20,7 @@ body {
 .card-container {
     // parent grid
     justify-content: start;
-    // local grid
+    // subgrid
     display: grid;
     .info {
         grid-column: 2/3;

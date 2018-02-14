@@ -3,13 +3,12 @@ body {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   display: grid;
-  grid-auto-columns: fit-content(100%); }
+  grid-auto-columns: fit-content(100%);
+  grid-gap: 20px; }
 
-.versions {
-  margin-bottom: 20px; }
-  .versions h2 {
-    display: inline-grid;
-    padding: 10px; }
+.versions h2 {
+  display: inline-grid;
+  padding: 10px; }
 
 .card-container {
   justify-content: start;
