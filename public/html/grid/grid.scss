@@ -5,8 +5,8 @@ body {
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     // grid
-    // display: grid;
-    // grid-auto-columns: fit-content(100%);
+    display: grid;
+    grid-auto-columns: fit-content(100%);
     grid-gap: 20px;
 }
 
@@ -22,7 +22,7 @@ body {
     justify-content: start;
     // subgrid
     display: grid;
-    max-width: 625px;
+    // max-width: 625px;
     .info {
         grid-column: 2/3;
     }

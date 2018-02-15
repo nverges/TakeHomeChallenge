@@ -2,6 +2,8 @@ body {
   margin: 20px;
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
+  display: grid;
+  grid-auto-columns: fit-content(100%);
   grid-gap: 20px; }
 
 .versions h2 {
@@ -11,7 +13,6 @@ body {
 .card-container {
   justify-content: start;
   display: grid;
-  max-width: 625px;
   padding: 20px 20px;
   border: 1px solid #c7c7c7;
   border-radius: 10px;
