@@ -6,11 +6,20 @@ body {
     font-family: 'Open Sans', sans-serif;
     // grid
     display: grid;
-    grid-auto-columns: fit-content(100%);
-    grid-gap: 20px;
+    // grid-auto-columns: fit-content(100%);
+    grid-template-columns: repeat(1fr, auto);
+}
+
+#rocket {
+    grid-column: auto;
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 120px;
 }
 
 .versions {
+    text-align: center;
     h2 {
         display: inline-grid;
         padding: 10px;
@@ -22,7 +31,7 @@ body {
     justify-content: start;
     // subgrid
     display: grid;
-    // max-width: 625px;
+    max-width: 610px;
     .info {
         grid-column: 2/3;
     }
@@ -71,7 +80,7 @@ hr {
 #bonus {
     text-align: center;
     margin-top: 50px;
-    display: grid;
+    // display: grid;
     img {
         margin-right: 20px;
         max-width: 150%;

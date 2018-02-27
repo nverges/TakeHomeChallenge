@@ -3,8 +3,14 @@ body {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif; }
 
+#rocket {
+  display: block;
+  margin: auto;
+  width: 120px;
+  height: 120px; }
+
 .versions {
-  margin-bottom: 20px; }
+  text-align: center; }
   .versions h2 {
     display: inline-flex;
     padding: 10px; }

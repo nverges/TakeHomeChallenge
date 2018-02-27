@@ -43,9 +43,9 @@ function giphy(gif) {
 const details = function() {
     let answer = confirm('Just for fun.... do you like my coding challenge?!');
     if (!answer) {
-        giphy('boo');
+        giphy('cry');
     } else {
-        giphy('woo-hoo');
+        giphy('yay');
     }
 }
 

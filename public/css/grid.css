@@ -3,16 +3,25 @@ body {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   display: grid;
-  grid-auto-columns: fit-content(100%);
-  grid-gap: 20px; }
+  grid-template-columns: repeat(1fr, auto); }
 
-.versions h2 {
-  display: inline-grid;
-  padding: 10px; }
+#rocket {
+  grid-column: auto;
+  display: block;
+  margin: auto;
+  width: 120px;
+  height: 120px; }
+
+.versions {
+  text-align: center; }
+  .versions h2 {
+    display: inline-grid;
+    padding: 10px; }
 
 .card-container {
   justify-content: start;
   display: grid;
+  max-width: 610px;
   padding: 20px 20px;
   border: 1px solid #c7c7c7;
   border-radius: 10px;
@@ -52,8 +61,7 @@ hr {
 
 #bonus {
   text-align: center;
-  margin-top: 50px;
-  display: grid; }
+  margin-top: 50px; }
   #bonus img {
     margin-right: 20px;
     max-width: 150%;
